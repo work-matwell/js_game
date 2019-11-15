@@ -1,0 +1,44 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #151515;
+}
+.game{
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 288px;
+    height: 512px;
+    background-image:url(../img/bg.png);
+}
+.text{
+    width: 60%;
+    background: aliceblue;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 15px auto;
+    border-style: outset;
+    text-align: center;
+}
+.text a{
+    font-family: 'Press Start 2P', cursive;
+    text-decoration: none;
+    font-size: 22px;
+    color: rgb(125, 145, 236);
+}
+.play{
+    margin-top: 80px;
+}
+.developer{
+    margin: 100% 0% 0% 0%;
+}
+.developer a{
+    text-decoration: none;
+    color: #151515;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+}

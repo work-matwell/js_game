@@ -1,0 +1,30 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #151515;
+}
+.rule{
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 288px;
+    height: 512px;
+    background-image:url(../img/bg.png);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    color: rgb(12, 33, 125);
+    text-align: center;
+}
+button{
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 22px;
+    color: rgb(125, 145, 236);
+    margin: 10% 0;
+}
