@@ -24,7 +24,7 @@ document.addEventListener('keypress', upDown);
 function upDown(EO){
   EO = EO||window.event;
   var key = EO.keyCode||EO.which;
-  console.log(key);
+  //console.log(key);
   if (key === 1094){// ц
       moveUp();
   }
