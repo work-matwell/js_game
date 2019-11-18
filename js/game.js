@@ -36,6 +36,40 @@ function upDown(EO){
     moveUp();       //
   }
 }
+//Обработка при касании тача
+document.addEventListener("touchstart", moveUp);
+//Обработка свайпов
+var initialPoint;
+var finalPoint;
+document.addEventListener('touchstart', start, false);
+function start(EO){
+    EO=EO||window.event;
+    initialPoint=EO.changedTouches[0];
+};
+document.addEventListener('touchend', end, false);
+function end(EO){
+    finalPoint=EO.changedTouches[0];
+    var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
+    var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
+    if (xAbs > 20 || yAbs > 20) if (xAbs > yAbs) {
+        if (finalPoint.pageX < initialPoint.pageX){
+                //console.log("Left");
+            }
+            else{
+                //console.log("Rigth");
+            }
+        }
+        else {
+            if (finalPoint.pageY < initialPoint.pageY){
+                //console.log("Up");
+                moveUp();
+                moveUp();
+            }
+            else{
+                moveDown();
+            }
+        }
+}
 //Функция взлета птички
 function moveUp(){
  yPos -= 30;
@@ -46,8 +80,6 @@ function moveUp(){
 function moveDown(){
   grav = 3;
 }
-//Обработка при касании тача
-document.addEventListener("touchend", moveUp);
 // Создание блоков
 var pipe = [];
 pipe[0] = {
@@ -107,3 +139,4 @@ function gameOverMenu(){
 }
 //Выполнить функцию отрисовки после загрузки последнего изображения
 pipeBottom.onload = draw;
+
