@@ -32,8 +32,7 @@ function upDown(EO){
     moveDown();
   }
   if (key === 1062){// Ц
-    moveUp();       // х2 для быстрого взлёта
-    moveUp();       //
+    moveUpTwice();       // х2 для быстрого взлёта
   }
 }
 //Обработка при касании тача
@@ -62,8 +61,7 @@ function end(EO){
         else {
             if (finalPoint.pageY < initialPoint.pageY){
                 //console.log("Up");
-                moveUp();
-                moveUp();
+                moveUpTwice();
             }
             else{
                 moveDown();
@@ -75,6 +73,11 @@ function moveUp(){
  yPos -= 30;
  grav = 1.5;
  fly.play();
+}
+function moveUpTwice(){
+  yPos -= 60;
+  grav = 1.5;
+  fly.play();
 }
 //Функция падения птички
 function moveDown(){
