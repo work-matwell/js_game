@@ -32,9 +32,41 @@ function upDown(EO){
     moveDown();
   }
   if (key === 1062){// Ц
-    moveUp();       // х2 для быстрого взлёта
-    moveUp();       //
+    moveUpTwice();       // х2 для быстрого взлёта
   }
+}
+//Обработка при касании тача
+document.addEventListener("touchstart", moveUp);
+//Обработка свайпов
+var initialPoint;
+var finalPoint;
+document.addEventListener('touchstart', start, false);
+function start(EO){
+    EO=EO||window.event;
+    initialPoint=EO.changedTouches[0];
+};
+document.addEventListener('touchend', end, false);
+function end(EO){
+    finalPoint=EO.changedTouches[0];
+    var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
+    var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
+    if (xAbs > 20 || yAbs > 20) if (xAbs > yAbs) {
+        if (finalPoint.pageX < initialPoint.pageX){
+                //console.log("Left");
+            }
+            else{
+                //console.log("Rigth");
+            }
+        }
+        else {
+            if (finalPoint.pageY < initialPoint.pageY){
+                //console.log("Up");
+                moveUpTwice();
+            }
+            else{
+                moveDown();
+            }
+        }
 }
 //Функция взлета птички
 function moveUp(){
@@ -42,12 +74,15 @@ function moveUp(){
  grav = 1.5;
  fly.play();
 }
+function moveUpTwice(){
+  yPos -= 60;
+  grav = 1.5;
+  fly.play();
+}
 //Функция падения птички
 function moveDown(){
   grav = 3;
 }
-//Обработка при касании тача
-document.addEventListener("touchend", moveUp);
 // Создание блоков
 var pipe = [];
 pipe[0] = {
@@ -107,3 +142,4 @@ function gameOverMenu(){
 }
 //Выполнить функцию отрисовки после загрузки последнего изображения
 pipeBottom.onload = draw;
+
