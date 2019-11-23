@@ -141,8 +141,7 @@ function draw() {
   //Рисовка под частоту монитора
   requestAnimationFrame(draw);
 }
-//Выполнить функцию отрисовки после загрузки последнего изображения
-//pipeBottom.onload = draw;
+//Переключение на меню
 function rule(){
   document.getElementById("rule").style.cssText = "display: block";
 }
