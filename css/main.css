@@ -30,7 +30,7 @@ html, body {
     font-family: 'Press Start 2P', cursive;
     text-decoration: none;
     font-size: 22px;
-    height: 10vh;
+    height: 55px;
     width: 250px;
     color: rgb(125, 145, 236);
     transition: .3s all;
@@ -51,7 +51,7 @@ html, body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 115px;
+    bottom: 100px;
     left: 10px;
     font-size: 25px; 
 }
