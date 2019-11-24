@@ -1,3 +1,5 @@
+//Анимация меню
+
 //Поиск и указание режима
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
@@ -141,7 +143,6 @@ function draw() {
   //Рисовка под частоту монитора
   requestAnimationFrame(draw);
 }
-//Переключение на меню
 function rule(){
   document.getElementById("rule").style.cssText = "display: block";
 }
