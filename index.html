@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Flappy Bird</title>
- <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
- <link href="css/cssIndex.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-    <div class="game">
-        <div class="text play btn">
-            <a href="html/game.html">Играть</a>
+    <!--Главное меню игры-->
+    <div class="game_menu center">
+        <div id="animMenu">
+            <button onclick="draw()" class="btn btnPlay">Играть</button>
+            <button onclick="rule()" class="btn">Правила игры</button>
         </div>
-        <div class="text rule btn">
-                <a href="html/rule.html">Правила игры</a>
-        </div>
-        <img src="img/moveBird.gif" class="bird">
-        <div class="developer"><a href="" title="Профиль в Вконтакте">Евгений Петровский</a></div>
+        <img src="img/moveBird.gif" class="bird" onclick="">
     </div>
+    <!--Меню окончания игры-->
+    <div id="gameOver">
+            <div><a href="" class="btn btnGameOver">Меню</a></div>
+            <div class="score">Твой счёт <div id="score"></div></div>
+        </div>
+    </div>
+    <!--Правила игры-->
+    <div id="rule">
+            <p>Правила очень проcты</p>
+            <p>Задача заключается в маневрировании птичкой между трубами</p>
+            <p>Управление</p>
+            <ul title="Управление для ПК">
+                <li>W - взлететь вверх</li>
+                <li>Shift + W - рывок вверх</li>
+                <li>S - пикировать вниз (для возвращения в обычное состояние нажмите W)</li>
+            </ul>
+            <ul title="Управление для телефона">
+                <li>Для взлёта птички на телефоне просто коснитесь экрана устройства</li>
+                <li>SwipeUp - рывок вверх</li>
+                <li>SwipeDown - пикировать вниз</li>
+            </ul>
+            <div><a href="" class="btn btnRule">Меню</a></div>
+    </div>
+    <!--Окно игры-->
+    <div id="game">
+        <canvas id="canvas" width="288px" height="512px"></canvas>
+    </div>
+    <!--Загрузка JS-->
+    <script src="js/game.js"></script>
 </body>
 </html>

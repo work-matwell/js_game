@@ -1,0 +1,99 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #151515;
+    overflow: hidden;
+}
+.game_menu, #gameOver, #rule{
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 288px;
+    height: 512px;
+    background-image:url(../img/bg.png);
+}
+.center{
+    text-align: center;
+}
+/*Описание кнопок*/
+.btn{
+    background: aliceblue;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 15px auto;
+    border-style: outset;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    text-decoration: none;
+    font-size: 22px;
+    height: 55px;
+    width: 250px;
+    color: rgb(125, 145, 236);
+    transition: .3s all;
+}
+.btn:hover{
+    box-shadow: 0px 0px 10px 5px rgba(255,255,255,0.85);
+}
+/*Описание главного меню*/
+.btnPlay{
+    margin-top: 80px;
+}
+.bird{
+    height: 50px;
+}
+/*Блок окончания игры*/
+.btnGameOver{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 100px;
+    left: 10px;
+    font-size: 25px; 
+}
+#score{
+    margin-top: 20px;
+    font-size: 55px;
+}
+.score{
+    text-align: center;
+    padding-top: 20vh;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Press Start 2P', cursive;
+}
+/*Игра*/
+#game{
+    display: none;
+}
+canvas {
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/*Правила игры*/
+.btnRule{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    font-size: 25px; 
+}
+#rule{
+    font-size: 14px;
+    text-align: left;
+    font-family: 'Press Start 2P', cursive;
+}
+#rule p{
+    margin-left: 5px;
+}
